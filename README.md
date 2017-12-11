@@ -1,4 +1,4 @@
 # Draft-frontend-challenge
-cd client/
-npm install
-npm start
+* cd client/
+* npm install
+* npm start
