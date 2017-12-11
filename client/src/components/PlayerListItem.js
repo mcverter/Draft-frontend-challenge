@@ -1,9 +1,10 @@
 import React from 'react';
+import Statistic from './Statistic'
 
 const PlayerListItem =
     ({id, first_name, last_name, league, team, photo_url, clickHandler}) => (
         <div style={styles.playerContainer}>
-            <div className="pictureDiv">
+            <div>
                 <div>
                     <img alt="Player Headshot" src={photo_url} />
                 </div>
@@ -11,10 +12,10 @@ const PlayerListItem =
                     <span>{first_name}</span> <span>{last_name}</span>
                 </div>
             </div>
-            <div className="statisticsDiv">
+            <div>
                 <div style={styles.statsHeader}> Statistics </div>
-                <div> League: {league}</div>
-                <div> Team: {team}</div>
+                <Statistic label="League" stat={league} />
+                <Statistic label="Team" stat={team} />
                 <div>
                     <button style={styles.infoButton}
                             onClick={()=>clickHandler(id)}>
@@ -48,11 +49,11 @@ const styles = {
         fontSize: "150%"
     },
     infoButton: {
-        marginTop: "20px",
+        marginTop: "100px",
         fontWeight: "600",
         backgroundColor: "#2E882E",
         color: "white"
     }
-}
+};
 
 export default PlayerListItem;

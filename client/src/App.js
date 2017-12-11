@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import PlayerListing from './containers/PlayerListing'
+import PlayerListing from './containers/PlayerListPage'
 
 class App extends Component {
   render() {
